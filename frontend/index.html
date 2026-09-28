@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+```
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Student Career Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+    <div class="header-inner">
+
+        <div class="brand-area">
+
+            <div class="brand-icon">
+                🎓
+            </div>
+
+            <div>
+                <h1>Student Career Tracker</h1>
+
+                <p>
+                    Smart career planning & placement preparation
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="header-badge">
+
+            <span class="status-dot"></span>
+
+            Career Dashboard
+
+        </div>
+
+    </div>
+
+
+</header>
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+```
+<div class="welcome-banner">
+
+    <div>
+
+        <span class="welcome-label">
+            CAREER JOURNEY
+        </span>
+
+        <h2>
+            Build your skills. Prepare for your future.
+        </h2>
+
+        <p>
+            Track your progress, identify skill gaps,
+            prepare for interviews and improve your placement readiness.
+        </p>
+
+    </div>
+
+    <div class="welcome-icon">
+        🚀
+    </div>
+
+</div>
+<!-- =====================================================
+     ROW 1 : REGISTRATION + PROFILE
+====================================================== -->
+
+<div class="two-column-grid">
+
+    <!-- STUDENT REGISTRATION -->
+
+    <section class="card">
+
+        <div class="section-heading">
+            <span>📝</span>
+
+            <div>
+                <h2>Student Registration</h2>
+                <p>Create your career profile</p>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="studentName">
+                Student Name
+            </label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your name">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="studentEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="studentEmail"
+                placeholder="Enter your email">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="targetRole">
+                Target Job Role
+            </label>
+
+            <select id="targetRole">
+
+                <option value="">
+                    Select Target Role
+                </option>
+
+                <option value="Full Stack Developer">
+                    Full Stack Developer
+                </option>
+
+                <option value="Frontend Developer">
+                    Frontend Developer
+                </option>
+
+                <option value="Backend Developer">
+                    Backend Developer
+                </option>
+
+                <option value="Python Developer">
+                    Python Developer
+                </option>
+
+                <option value="Data Analyst">
+                    Data Analyst
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button id="registerButton">
+            Register Student
+        </button>
+
+        <p id="studentMessage"></p>
+
+    </section>
+
+
+    <!-- STUDENT PROFILE -->
+
+    <section class="card" id="profileSection">
+
+        <div class="section-heading">
+            <span>👤</span>
+
+            <div>
+                <h2>Student Profile</h2>
+                <p>Your registered profile</p>
+            </div>
+        </div>
+
+
+        <div id="profileContent">
+
+            <p>
+                No student registered yet.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<!-- =====================================================
+     ROW 2 : SKILLS TRACKER
+====================================================== -->
+
+<section class="card">
+
+    <div class="section-heading">
+        <span>💻</span>
+
+        <div>
+            <h2>Skills Tracker</h2>
+            <p>Add your skills and track your progress</p>
+        </div>
+    </div>
+
+
+    <form id="skillForm" class="skill-form">
+
+        <div class="skill-form-grid">
+
+            <div class="form-group">
+
+                <label for="skill">
+                    Skill Name
+                </label>
+
+                <select id="skill" required>
+
+                    <option value="">
+                        Select a Skill
+                    </option>
+
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="React">React</option>
+                    <option value="Node.js">Node.js</option>
+                    <option value="Express.js">Express.js</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="SQL">SQL</option>
+                    <option value="PostgreSQL">PostgreSQL</option>
+                    <option value="MongoDB">MongoDB</option>
+                    <option value="Git">Git</option>
+                    <option value="GitHub">GitHub</option>
+                    <option value="AWS">AWS</option>
+                    <option value="Docker">Docker</option>
+                    <option value="Machine Learning">
+                        Machine Learning
+                    </option>
+                    <option value="Power BI">Power BI</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="progress">
+                    Progress (%)
+                </label>
+
+                <select id="progress" required>
+
+                    <option value="">
+                        Select Progress
+                    </option>
+
+                    <option value="0">
+                        0% - Not Started
+                    </option>
+
+                    <option value="25">
+                        25% - Beginner
+                    </option>
+
+                    <option value="50">
+                        50% - Basic
+                    </option>
+
+                    <option value="75">
+                        75% - Intermediate
+                    </option>
+
+                    <option value="100">
+                        100% - Completed
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="skill-button-area">
+
+                <button
+                    type="submit"
+                    id="addSkillButton">
+
+                    ➕ Add Skill
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+    <div id="skillsList">
+
+        <p>
+            No skills added yet.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ROW 3 : CAREER DASHBOARD
+====================================================== -->
+
+<section class="card dashboard-section">
+
+    <div class="section-heading">
+        <span>📊</span>
+
+        <div>
+            <h2>Career Dashboard</h2>
+            <p>Your career progress at a glance</p>
+        </div>
+    </div>
+
+
+    <div class="dashboard-grid">
+
+
+        <div class="dashboard-item">
+
+            <div class="dashboard-icon">
+                🎯
+            </div>
+
+            <div>
+                <h3>Target Role</h3>
+
+                <p id="dashboardRole">
+                    Full Stack Developer
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-item">
+
+            <div class="dashboard-icon">
+                💻
+            </div>
+
+            <div>
+                <h3>Total Skills</h3>
+
+                <p id="totalSkills">
+                    0
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-item">
+
+            <div class="dashboard-icon">
+                📈
+            </div>
+
+            <div>
+                <h3>Average Progress</h3>
+
+                <p id="averageProgress">
+                    0%
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-item">
+
+            <div class="dashboard-icon">
+                🚀
+            </div>
+
+            <div>
+                <h3>Career Readiness</h3>
+
+                <p id="careerReadiness">
+                    0%
+                </p>
+            </div>
+
+            <div class="progress-container">
+
+                <div
+                    id="readinessBar"
+                    class="progress-bar"
+                    style="width: 0%;">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ROW 4 : REQUIRED SKILLS + LEARNING
+====================================================== -->
+
+<div class="two-column-grid">
+
+
+    <!-- REQUIRED SKILLS -->
+
+    <section class="card">
+
+        <div class="section-heading">
+            <span>🎯</span>
+
+            <div>
+                <h2>Required Skills</h2>
+                <p>Skills required for your target role</p>
+            </div>
+        </div>
+
+
+        <div id="requiredSkillsList">
+
+            <p>
+                No required skills available.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECOMMENDED LEARNING -->
+
+    <section class="card">
+
+        <div class="section-heading">
+            <span>📚</span>
+
+            <div>
+                <h2>Recommended Learning</h2>
+                <p>Improve your incomplete skills</p>
+            </div>
+        </div>
+
+
+        <div id="learningList">
+
+            <p>
+                Select a target role to see
+                recommended learning.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<!-- =====================================================
+     ROW 5 : SKILL GAP + PLACEMENT READINESS
+====================================================== -->
+
+<div class="two-column-grid">
+
+
+    <!-- SKILL GAP ANALYSIS -->
+
+    <section class="card">
+
+        <div class="section-heading">
+            <span>🔍</span>
+
+            <div>
+                <h2>Skill Gap Analysis</h2>
+                <p>Identify skills that need attention</p>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="skillGapRole">
+                Target Role
+            </label>
+
+            <select id="skillGapRole">
+
+                <option value="Full Stack Developer">
+                    Full Stack Developer
+                </option>
+
+                <option value="Frontend Developer">
+                    Frontend Developer
+                </option>
+
+                <option value="Backend Developer">
+                    Backend Developer
+                </option>
+
+                <option value="Python Developer">
+                    Python Developer
+                </option>
+
+                <option value="Data Analyst">
+                    Data Analyst
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="gap-count-card">
+
+            <span>⚠️</span>
+
+            <div>
+
+                <h3>
+                    Skills Requiring Attention
+                </h3>
+
+                <p id="skillGapCount">
+                    0
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="skillGapList">
+
+            <p>
+                No skill gap information available.
+            </p>
+
+        </div>
+
+
+        <div class="focus-section">
+
+            <h3>
+                🎯 Skills to Focus On
+            </h3>
+
+            <ul id="focusSkills">
+
+                <li>
+                    No skills to focus on.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <button id="analyzeGapButton">
+
+            🔍 Analyze My Skill Gaps
+
+        </button>
+
+    </section>
+
+
+
+    <!-- PLACEMENT READINESS -->
+
+    <section class="card placement-readiness-section">
+
+        <div class="section-heading">
+            <span>🎯</span>
+
+            <div>
+                <h2>Placement Readiness</h2>
+                <p>Your current placement preparation</p>
+            </div>
+        </div>
+
+
+        <div class="readiness-info-grid">
+
+            <div class="readiness-info">
+
+                <h3>Student</h3>
+
+                <p id="readinessStudent">
+                    Bareddy Harshitha
+                </p>
+
+            </div>
+
+
+            <div class="readiness-info">
+
+                <h3>Target Role</h3>
+
+                <p id="readinessRole">
+                    Full Stack Developer
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="readiness-score-section">
+
+            <h3>
+                Overall Placement Readiness
+            </h3>
+
+            <p
+                id="readinessScore"
+                class="big-score">
+
+                0%
+
+            </p>
+
+
+            <div class="progress-container">
+
+                <div
+                    id="readinessProgressBar"
+                    class="progress-bar"
+                    style="width: 0%;">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-grid readiness-stats">
+
+
+            <div class="dashboard-item">
+
+                <div class="dashboard-icon">
+                    ✅
+                </div>
+
+                <div>
+                    <h3>Completed</h3>
+
+                    <p id="completedCount">
+                        0
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-item">
+
+                <div class="dashboard-icon">
+                    🔄
+                </div>
+
+                <div>
+                    <h3>In Progress</h3>
+
+                    <p id="inProgressCount">
+                        0
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-item">
+
+                <div class="dashboard-icon">
+                    ⏳
+                </div>
+
+                <div>
+                    <h3>Not Started</h3>
+
+                    <p id="notStartedCount">
+                        0
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="readiness-lists">
+
+
+            <div class="readiness-list-section">
+
+                <h3>✅ Completed Skills</h3>
+
+                <div id="completedSkillsList">
+
+                    <p>
+                        No completed skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="readiness-list-section">
+
+                <h3>🔄 Skills In Progress</h3>
+
+                <div id="inProgressSkillsList">
+
+                    <p>
+                        No skills in progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="readiness-list-section">
+
+                <h3>⏳ Skills Not Started</h3>
+
+                <div id="notStartedSkillsList">
+
+                    <p>
+                        No skills not started.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="readiness-list-section priority-section">
+
+                <h3>🔥 Priority Skills</h3>
+
+                <div id="prioritySkillsList">
+
+                    <p>
+                        No priority skills available.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button id="readinessButton">
+
+            📊 Generate Placement Report
+
+        </button>
+
+    </section>
+
+</div>
+
+
+
+<!-- =====================================================
+     ROW 6 : INTERVIEW PREPARATION
+====================================================== -->
+
+<section
+    class="card interview-section"
+    id="interviewSection">
+
+    <div class="section-heading">
+
+        <span>🎤</span>
+
+        <div>
+
+            <h2>Interview Preparation</h2>
+
+            <p>
+                Practice interview questions based on
+                your target job role.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="interview-selection-grid">
+
+
+        <div class="form-group">
+
+            <label for="interviewRole">
+                Target Job Role
+            </label>
+
+            <select id="interviewRole">
+
+                <option value="Full Stack Developer">
+                    Full Stack Developer
+                </option>
+
+                <option value="Frontend Developer">
+                    Frontend Developer
+                </option>
+
+                <option value="Backend Developer">
+                    Backend Developer
+                </option>
+
+                <option value="Python Developer">
+                    Python Developer
+                </option>
+
+                <option value="Data Analyst">
+                    Data Analyst
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="interviewType">
+                Interview Type
+            </label>
+
+            <select id="interviewType">
+
+                <option value="Technical">
+                    💻 Technical Interview
+                </option>
+
+                <option value="HR">
+                    👥 HR Interview
+                </option>
+
+                <option value="Behavioral">
+                    🧠 Behavioral Interview
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <button id="startInterviewButton">
+
+        🚀 Start Interview
+
+    </button>
+
+
+    <div
+        id="interviewQuestionArea"
+        class="interview-question-area"
+        style="display: none;">
+
+
+        <div class="interview-progress">
+
+            <p id="questionNumber">
+                Question 1
+            </p>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <span
+                id="questionDifficulty"
+                class="difficulty-badge">
+
+                Beginner
+
+            </span>
+
+
+            <h3 id="interviewQuestion">
+
+                Interview question will
+                appear here.
+
+            </h3>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="interviewAnswer">
+                Your Answer
+            </label>
+
+            <textarea
+                id="interviewAnswer"
+                rows="7"
+                placeholder="Type your answer here...">
+            </textarea>
+
+        </div>
+
+
+        <div class="interview-buttons">
+
+            <button id="previousQuestionButton">
+                ⬅ Previous
+            </button>
+
+            <button id="nextQuestionButton">
+                Next ➡
+            </button>
+
+        </div>
+
+
+        <div
+            id="interviewResult"
+            class="interview-result"
+            style="display: none;">
+
+            <h3>
+                🎉 Interview Completed!
+            </h3>
+
+
+            <p>
+
+                Questions Attempted:
+
+                <strong id="attemptedQuestions">
+                    0
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Interview Type:
+
+                <strong id="completedInterviewType">
+                    Technical
+                </strong>
+
+            </p>
+
+
+            <button id="restartInterviewButton">
+
+                🔄 Start Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ROW 7 : RESUME READINESS
+====================================================== -->
+
+<section class="card resume-readiness-section">
+
+    <div class="section-heading">
+
+        <span>📄</span>
+
+        <div>
+
+            <h2>Resume Readiness</h2>
+
+            <p>
+                Check and improve your resume profile
+                before applying for jobs.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="resume-layout">
+
+
+        <div class="resume-score-card">
+
+            <h3>Resume Score</h3>
+
+            <div class="resume-score">
+
+                <span id="resumeScore">
+                    0%
+                </span>
+
+            </div>
+
+            <p id="resumeScoreMessage">
+
+                Complete your profile to improve
+                your resume readiness.
+
+            </p>
+
+        </div>
+
+
+        <div class="resume-checklist">
+
+            <h3>
+                Resume Checklist
+            </h3>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="profileCompleted">
+
+                Profile Completed
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="educationCompleted">
+
+                Education Completed
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="skillsCompleted">
+
+                Skills Completed
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="projectsCompleted">
+
+                Projects Completed
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="certificationsCompleted">
+
+                Certifications Completed
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="githubCompleted">
+
+                GitHub Completed
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="linkedinCompleted">
+
+                LinkedIn Completed
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <button
+        id="updateResumeButton"
+        type="button">
+
+        Update Resume Readiness
+
+    </button>
+
+</section>
+```
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+```
+<p>
+    © 2026 Student Career Tracker
+</p>
+```
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
